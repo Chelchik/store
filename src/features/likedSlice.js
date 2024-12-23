@@ -20,7 +20,7 @@ export function likedReducer(state = likedInitialState, action) {
 }
 
 export const likedInitialState = {
-  liked: [],
+  liked: JSON.parse(localStorage.getItem("likedState"))?.liked || [],
 };
 
 export function likedSelect(state) {
